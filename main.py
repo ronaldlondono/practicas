@@ -1,5 +1,7 @@
-for i in range(2):
-    print("hello word")
+from fastapi import FastAPI
 
-print("ya pude")
-print("HOla")
+app = FastAPI()
+
+@app.get('/')
+def ruta_inicial():
+    return{"Bienvenido": "bienvenido a mi api"}
